@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<VBox prefHeight="800" prefWidth="1380" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="manager.controller.MainController" stylesheets="@../../stylesheets/main.css"
+      styleClass="main">
+    <MenuBar>
+        <Menu mnemonicParsing="false" text="서버">
+            <MenuItem mnemonicParsing="false" onAction="#closeButtonAction" text="서버종료"/>
+            <MenuItem mnemonicParsing="false" onAction="#closeNowButtonAction" text="바로종료"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text="설정">
+            <MenuItem mnemonicParsing="false" onAction="#initServer" text="서버초기화"/>
+        </Menu>
+    </MenuBar>
+    <JFXTabPane side="LEFT" VBox.vgrow="ALWAYS">
+        <Tab closable="false" text="모니터링">
+            <graphic>
+                <FontAwesomeIconView glyphName="INFO"/>
+            </graphic>
+            <fx:include source="monitoring.fxml"/>
+        </Tab>
+
+        <Tab closable="false" text="채팅로그">
+            <graphic>
+                <FontAwesomeIconView glyphName="COMMENT"/>
+            </graphic>
+            <fx:include source="chat.fxml"/>
+        </Tab>
+
+        <!--
+        <Tab closable="false" text="유저조회">
+            <graphic>
+                <FontAwesomeIconView glyphName="COMMENT"/>
+            </graphic>
+            <fx:include source="user.fxml"/>
+        </Tab>
+        -->
+
+        <Tab closable="false" text="웹매니저">
+            <graphic>
+                <FontAwesomeIconView glyphName="COG"/>
+            </graphic>
+            <fx:include source="web.fxml"/>
+        </Tab>
+    </JFXTabPane>
+</VBox>

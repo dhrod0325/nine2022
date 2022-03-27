@@ -1,0 +1,25 @@
+
+.user .tab *.tab-label {
+    -fx-rotate: 0;
+    -fx-font-size: 12;
+}
+
+.tab {
+    -fx-padding: 4;
+}
+
+.tab:selected {
+    -fx-background-color: #fff;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #333;
+}
+
+.tab .glyph-icon {
+    -fx-fill: #fff;
+}
+
+.tab:selected .glyph-icon {
+    -fx-fill: #333;
+}

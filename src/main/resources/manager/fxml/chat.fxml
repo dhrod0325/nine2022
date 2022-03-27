@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.TextFlow?>
+<VBox prefHeight="800.0" prefWidth="1024.0" stylesheets="@../../stylesheets/monitoring.css"
+      xmlns="http://javafx.com/javafx" fx:controller="manager.controller.ChatController"
+      xmlns:fx="http://javafx.com/fxml/1">
+
+    <HBox>
+        <VBox HBox.hgrow="ALWAYS">
+            <VBox styleClass="card-design" HBox.hgrow="ALWAYS">
+                <VBox styleClass="card-header">
+                    <Label text="채팅"/>
+                </VBox>
+                <VBox styleClass="card-body">
+                    <HBox style="-fx-padding:0 0 5 0" spacing="10">
+                        <JFXButton styleClass="btn" text="모두" onMouseClicked="#onClickedChat"/>
+                        <JFXButton styleClass="btn" text="일반" onMouseClicked="#onClickedChat"/>
+                        <JFXButton styleClass="btn" text="전체" onMouseClicked="#onClickedChat"/>
+                        <JFXButton styleClass="btn" text="귓말" onMouseClicked="#onClickedChat"/>
+                        <JFXButton styleClass="btn" text="혈맹" onMouseClicked="#onClickedChat"/>
+                        <JFXButton styleClass="btn" text="파티" onMouseClicked="#onClickedChat"/>
+
+                        <Pane HBox.hgrow="ALWAYS"/>
+                        <JFXButton styleClass="btn" fx:id="toggleScrollBtn" text="스크롤 정지"/>
+                    </HBox>
+
+                    <ScrollPane fx:id="chatScroll">
+                        <TextFlow prefHeight="600" fx:id="chatArea" style="-fx-padding: 10"/>
+                    </ScrollPane>
+
+                </VBox>
+            </VBox>
+
+            <VBox styleClass="card-design" HBox.hgrow="ALWAYS">
+                <VBox styleClass="card-header">
+                    <Label text="운영자 채팅"/>
+                </VBox>
+                <VBox styleClass="card-body">
+                    <HBox style="-fx-padding:0 0 5 0">
+                        <Pane HBox.hgrow="ALWAYS"/>
+                        <JFXButton styleClass="btn" fx:id="gmToggleScrollBtn" text="스크롤 정지"/>
+                    </HBox>
+
+                    <ScrollPane fx:id="gmChatScroll">
+                        <TextFlow prefHeight="600" fx:id="gmChatArea" style="-fx-wrap-text: true;-fx-padding: 10"/>
+                    </ScrollPane>
+
+                    <HBox>
+                        <JFXTextField promptText="대상 아이디" fx:id="targetNameField"/>
+                        <JFXTextField promptText="메세지" HBox.hgrow="ALWAYS" onKeyPressed="#onKeyPressed"
+                                      fx:id="chatField"/>
+                    </HBox>
+                </VBox>
+            </VBox>
+        </VBox>
+    </HBox>
+</VBox>

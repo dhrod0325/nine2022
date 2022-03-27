@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import manager.util.element.LineBreak?>
+<VBox prefHeight="800.0" prefWidth="1024.0" stylesheets="@../../stylesheets/monitoring.css"
+      xmlns="http://javafx.com/javafx" fx:controller="manager.controller.MonitoringController"
+      xmlns:fx="http://javafx.com/fxml/1">
+
+    <HBox>
+        <VBox HBox.hgrow="ALWAYS">
+            <VBox styleClass="card-design" HBox.hgrow="ALWAYS">
+                <VBox styleClass="card-header">
+                    <Label text="모니터링"/>
+                </VBox>
+                <HBox HBox.hgrow="ALWAYS">
+                    <VBox styleClass="card-body" HBox.hgrow="ALWAYS">
+                        <VBox styleClass="pb-10">
+                            <Text text="Server Info"/>
+                        </VBox>
+                        <TextFlow>
+                            <Text text="Name : "/>
+                            <Label fx:id="txtServerName"/>
+                        </TextFlow>
+                        <TextFlow>
+                            <Text text="Host : "/>
+                            <Label fx:id="txtServerHost"/>
+                        </TextFlow>
+                        <TextFlow>
+                            <Text text="Port : "/>
+                            <Label fx:id="txtServerPort"/>
+                        </TextFlow>
+                        <TextFlow>
+                            <Text text="User : "/>
+                            <Label fx:id="txtMaxUser"/>
+                        </TextFlow>
+                    </VBox>
+
+                    <VBox styleClass="card-body" HBox.hgrow="ALWAYS">
+                        <VBox styleClass="pb-10">
+                            <Text text="Cpu Info"/>
+                        </VBox>
+                        <TextFlow>
+                            <Text text="Cpu Usage : "/>
+                            <Text fx:id="txtCpu" text="0000"/>
+                        </TextFlow>
+                        <TextFlow>
+                            <Text text="Memory Free : "/>
+                            <Text fx:id="txtMemFree" text="0000"/>
+                        </TextFlow>
+                        <TextFlow>
+                            <Text text="Memory Total : "/>
+                            <Text fx:id="txtMemTotal" text="0000"/>
+                        </TextFlow>
+                        <TextFlow>
+                            <Text text="Thread Count : "/>
+                            <Text fx:id="txtThreadCount" text="0000"/>
+                        </TextFlow>
+                    </VBox>
+                    <VBox styleClass="card-body" HBox.hgrow="ALWAYS">
+                        <VBox styleClass="pb-10">
+                            <Text text="Class Info"/>
+                        </VBox>
+                        <LineBreak/>
+                        <TextFlow>
+                            <Text text="ClassCount : "/>
+                            <Label fx:id="txtClassCount"/>
+                        </TextFlow>
+                        <TextFlow>
+                            <Text text="Total ClassCount : "/>
+                            <Label fx:id="txtTotalClassCount"/>
+                        </TextFlow>
+                    </VBox>
+                </HBox>
+            </VBox>
+        </VBox>
+    </HBox>
+    <VBox styleClass="card-design">
+        <HBox style="-fx-padding:0 0 5 0">
+            <JFXButton styleClass="btn" onMouseClicked="#toggleScroll" fx:id="toggleScrollBtn"/>
+        </HBox>
+        <VBox styleClass="card-header">
+            <Label text="서버 로그"/>
+        </VBox>
+        <VBox styleClass="card-body" fx:id="scrollWrapper">
+            <ScrollPane fx:id="logScroll">
+                <TextFlow prefHeight="600" fx:id="logArea" style="-fx-wrap-text: true;"/>
+            </ScrollPane>
+        </VBox>
+    </VBox>
+</VBox>

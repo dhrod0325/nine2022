@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx"
+      fx:controller="manager.controller.popup.user.UserPopupController"
+      xmlns:fx="http://javafx.com/fxml/1">
+
+    <JFXButton text="능력치조회" styleClass="p-10" onMouseClicked="#onClickedCharDesc"/>
+    <JFXButton text="장비조회" styleClass="p-10" onMouseClicked="#onClickedCharInventorySearch"/>
+    <JFXButton text="확정드랍" styleClass="p-10" onMouseClicked="#onClickedCharDrop"/>
+
+</VBox>

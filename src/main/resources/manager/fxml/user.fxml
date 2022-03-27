@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="800.0" prefWidth="1024.0"
+      xmlns="http://javafx.com/javafx" fx:controller="manager.controller.UserController"
+      xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../../stylesheets/user.css" styleClass="user">
+    <HBox>
+        <VBox styleClass="card-design" minWidth="300">
+            <VBox styleClass="card-header">
+                <Label text="유저"/>
+            </VBox>
+            <VBox styleClass="card-body" prefHeight="600">
+                <HBox styleClass="pb-10">
+                    <JFXTextField promptText="유저명"/>
+                    <JFXButton text="검색" styleClass="btn"/>
+                </HBox>
+
+                <JFXListView fx:id="pcListView" onMouseClicked="#listViewItemClicked" VBox.vgrow="ALWAYS">
+                </JFXListView>
+            </VBox>
+        </VBox>
+        <VBox styleClass="card-design" HBox.hgrow="ALWAYS">
+            <VBox styleClass="card-header">
+                <Label text="조회"/>
+            </VBox>
+            <VBox styleClass="card-body" prefHeight="600">
+                <JFXTabPane>
+                    <Tab text="능력치 조회">
+                        <fx:include source="userDesc.fxml"/>
+                    </Tab>
+                    <Tab text="장비조회">
+                        <fx:include source="userInventory.fxml"/>
+                    </Tab>
+                </JFXTabPane>
+            </VBox>
+        </VBox>
+    </HBox>
+</VBox>

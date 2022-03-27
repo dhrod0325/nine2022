@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'NanumGothic';
+    src: url('fonts/NanumGothicLight.ttf');
+}
+
+.root {
+    -fx-font-size: 12px;
+    -fx-font-family: "NanumGothic";
+}
+
+.btn {
+    -fx-background-color: #36474F;
+    -fx-padding: 5 10;
+    -fx-text-fill: #fff;
+}
+
+.pb-10 {
+    -fx-padding: 0 0 10 0;
+}
+
+.card-design {
+    -fx-padding: 5;
+
+}
+
+.card-header {
+    -fx-background-color: #36474F;
+    -fx-padding: 5;
+}
+
+.card-header .label {
+    -fx-text-fill: #fff;
+}
+
+.border-pane {
+    -fx-padding: 10 5 0 5;
+}
+
+.card-body {
+    -fx-padding: 5;
+    -fx-background-color: #fff;
+}
+
+.form-label {
+    -fx-pref-height: 30;
+}
+
+.form-control {
+    -fx-padding: 5 15 5 0;
+}
+
+.p-10 {
+    -fx-padding: 10;
+}

@@ -1,0 +1,28 @@
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #36474F;
+}
+
+.main .tab *.tab-label {
+    -fx-rotate: 90;
+    -fx-font-size: 12;
+}
+
+.tab {
+    -fx-padding: 4em 0em;
+}
+
+.tab:selected {
+    -fx-background-color: #fff;
+}
+
+.tab:selected .tab-label {
+    -fx-text-fill: #333;
+}
+
+.tab .glyph-icon {
+    -fx-fill: #fff;
+}
+
+.tab:selected .glyph-icon {
+    -fx-fill: #333;
+}

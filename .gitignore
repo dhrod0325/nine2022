@@ -1,0 +1,16 @@
+.gradle/
+.idea/
+gradle/
+out/
+build/
+upload_data/
+bin/
+
+/.egradle/
+/log/
+/backup/
+/data/emblem/
+/data/mapcache
+source
+data
+ext-lib

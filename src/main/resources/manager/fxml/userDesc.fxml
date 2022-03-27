@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox prefHeight="800.0" prefWidth="1024.0"
+      xmlns="http://javafx.com/javafx/17" fx:controller="manager.controller.UserDescController"
+      xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../../stylesheets/user.css"
+      styleClass="user"
+      spacing="10">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+    </padding>
+
+    <HBox>
+        <padding>
+            <Insets bottom="20.0"/>
+        </padding>
+        <Label text="아이디 : "/>
+        <Label text="0" fx:id="txtCharName" HBox.hgrow="ALWAYS"/>
+    </HBox>
+
+    <VBox>
+        <HBox>
+            <Label text="오브젝트아이디 : "/>
+            <Label fx:id="txtObjId" text="0"/>
+        </HBox>
+
+        <HBox>
+            <Label text="계정명 : "/>
+            <Label fx:id="txtAccountName" text="0"/>
+        </HBox>
+    </VBox>
+    <FlowPane hgap="20">
+        <HBox>
+            <Label text="level : "/>
+            <Label fx:id="txtLevel"/>
+        </HBox>
+
+        <HBox>
+            <Label text="HighLevel : "/>
+            <Label fx:id="txtHighLevel"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Exp : "/>
+            <Label fx:id="txtExp"/>
+        </HBox>
+    </FlowPane>
+    <FlowPane hgap="20">
+        <HBox>
+            <Label text="MaxHp : "/>
+            <Label fx:id="txtMaxHp"/>
+        </HBox>
+
+        <HBox>
+            <Label text="CurrentHp : "/>
+            <Label fx:id="txtCurrentHp"/>
+        </HBox>
+
+        <HBox>
+            <Label text="MaxMp : "/>
+            <Label fx:id="txtMaxMp"/>
+        </HBox>
+
+        <HBox>
+            <Label text="CurrentMp : "/>
+            <Label fx:id="txtCurrentMp"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Ac : "/>
+            <Label fx:id="txtAc"/>
+        </HBox>
+    </FlowPane>
+    <FlowPane hgap="20">
+        <HBox>
+            <Label text="Str : "/>
+            <Label fx:id="txtStr"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Con : "/>
+            <Label fx:id="txtCon"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Dex : "/>
+            <Label fx:id="txtDex"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Cha : "/>
+            <Label fx:id="txtCha"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Int : "/>
+            <Label fx:id="txtInt"/>
+        </HBox>
+
+        <HBox>
+            <Label text="Wis : "/>
+            <Label fx:id="txtWis"/>
+        </HBox>
+    </FlowPane>
+    <FlowPane hgap="20">
+        <HBox>
+            <Label text="TotalStr : "/>
+            <Label fx:id="txtTotalStr"/>
+        </HBox>
+
+        <HBox>
+            <Label text="TotalDex : "/>
+            <Label fx:id="txtTotalDex"/>
+        </HBox>
+
+        <HBox>
+            <Label text="TotalCon : "/>
+            <Label fx:id="txtTotalCon"/>
+        </HBox>
+
+        <HBox>
+            <Label text="TotalCha : "/>
+            <Label fx:id="txtTotalCha"/>
+        </HBox>
+
+        <HBox>
+            <Label text="TotalWis : "/>
+            <Label fx:id="txtTotalWis"/>
+        </HBox>
+
+        <HBox>
+            <Label text="TotalInt : "/>
+            <Label fx:id="txtTotalInt"/>
+        </HBox>
+    </FlowPane>
+</VBox>

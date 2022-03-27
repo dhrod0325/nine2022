@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+<VBox prefHeight="800.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="manager.controller.WebViewController" stylesheets="@../../stylesheets/main.css"
+      styleClass="main">
+
+    <WebView fx:id="webView" VBox.vgrow="ALWAYS"/>
+
+</VBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox prefHeight="800.0" prefWidth="1024.0"
+      xmlns="http://javafx.com/javafx" fx:controller="manager.controller.UserInventoryController"
+      xmlns:fx="http://javafx.com/fxml/1" stylesheets="@../../stylesheets/user.css" styleClass="user">
+
+    <TableView fx:id="inventoryView">
+        <columns>
+            <TableColumn text="Name" fx:id="nameColumn" prefWidth="170">
+                <cellValueFactory>
+                    <PropertyValueFactory property="name"/>
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Address" fx:id="addressColumn" prefWidth="170"/>
+            <TableColumn text="Gender" fx:id="genderColumn" prefWidth="170"/>
+            <TableColumn text="Class" fx:id="classColumn" prefWidth="170"/>
+        </columns>
+    </TableView>
+</VBox>
